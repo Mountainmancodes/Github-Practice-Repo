@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Search Results for "<span id="search-query"></span>"</h1>
+    
+    <form action="/search" method="POST" id="search-form">
+        <label for="query">New Search Query:</label>
+        <input type="text" id="query" name="query" required>
+        
+        <label for="format">Format:</label>
+        <select id="format" name="format">
+            <option value="all">All</option>
+            <option value="book">Books</option>
+            <option value="manuscript">Manuscripts</option>
+            <option value="map">Maps</option>
+            <option value="photo">Photos</option>
+            <option value="audio">Audio</option>
+            <option value="video">Video</option>
+        </select>
+        
+        <button type="submit">Search</button>
+    </form>
+    
+    <ul id="results-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
