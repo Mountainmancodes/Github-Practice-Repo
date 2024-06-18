@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library of Congress Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Library of Congress Search</h1>
+    <form action="/" method="POST">
+        <label for="query">Search Query:</label>
+        <input type="text" id="query" name="query" required>
+        
+        <label for="format">Format:</label>
+        <select id="format" name="format">
+            <option value="all">All</option>
+            <option value="book">Books</option>
+            <option value="manuscript">Manuscripts</option>
+            <option value="map">Maps</option>
+            <option value="photo">Photos</option>
+            <option value="audio">Audio</option>
+            <option value="video">Video</option>
+        </select>
+        
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
